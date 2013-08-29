@@ -118,31 +118,31 @@ class BootStrap {
         def postsAsList = phil.posts as List
         postsAsList[0].addToTags(user: phil, name: "groovy")
         postsAsList[0].addToTags(user: phil, name: "grails")
-        postsAsList[0].dateCreated = now.updated(year: 2004, month: MAY)
+        postsAsList[0].dateCreated = now.updated(YEAR: 2004, MONTH: MAY)
 
         postsAsList[1].addToTags(user: phil, name: "grails")
         postsAsList[1].addToTags(user: phil, name: "ramblings")
         postsAsList[1].addToTags(user: phil, name: "second")
-        postsAsList[1].dateCreated = now.updated(year: 2007, month: FEBRUARY, date: 13)
+        postsAsList[1].dateCreated = now.updated(YEAR: 2007, MONTH: FEBRUARY, DAY_OF_MONTH: 13)
 
         postsAsList[2].addToTags(user: phil, name: "groovy")
         postsAsList[2].addToTags(user: phil, name: "bbq")
-        postsAsList[2].dateCreated = now.updated(year: 2009, month: OCTOBER)
+        postsAsList[2].dateCreated = now.updated(YEAR: 2009, MONTH: OCTOBER)
 
         postsAsList[3].addToTags(user: phil, name: "groovy")
-        postsAsList[3].dateCreated = now.updated(year: 2011, month: MAY, date: 1)
+        postsAsList[3].dateCreated = now.updated(YEAR: 2011, MONTH: MAY, DAY_OF_MONTH: 1)
 
-        postsAsList[4].dateCreated = now.updated(year: 2011, month: DECEMBER, date: 4)
-        postsAsList[5].dateCreated = now.updated(year: 2012, date: 10)
+        postsAsList[4].dateCreated = now.updated(YEAR: 2011, MONTH: DECEMBER, DAY_OF_MONTH: 4)
+        postsAsList[5].dateCreated = now.updated(YEAR: 2012, DAY_OF_MONTH: 10)
         phil.save(failOnError: true)
 
         postsAsList = sara.posts as List
-        postsAsList[0].dateCreated = now.updated(year: 2007, month: MAY)
-        postsAsList[1].dateCreated = now.updated(year: 2008, month: MARCH, date: 13)
-        postsAsList[2].dateCreated = now.updated(year: 2008, month: APRIL, date: 24)
-        postsAsList[3].dateCreated = now.updated(year: 2011, month: NOVEMBER, date: 8)
-        postsAsList[4].dateCreated = now.updated(year: 2011, month: DECEMBER, date: 4)
-        postsAsList[5].dateCreated = now.updated(year: 2012, month: AUGUST, date: 1)
+        postsAsList[0].dateCreated = now.updated(YEAR: 2007, MONTH: MAY)
+        postsAsList[1].dateCreated = now.updated(YEAR: 2008, MONTH: MARCH, DAY_OF_MONTH: 13)
+        postsAsList[2].dateCreated = now.updated(YEAR: 2008, MONTH: APRIL, DAY_OF_MONTH: 24)
+        postsAsList[3].dateCreated = now.updated(YEAR: 2011, MONTH: NOVEMBER, DAY_OF_MONTH: 8)
+        postsAsList[4].dateCreated = now.updated(YEAR: 2011, MONTH: DECEMBER, DAY_OF_MONTH: 4)
+        postsAsList[5].dateCreated = now.updated(YEAR: 2012, MONTH: AUGUST, DAY_OF_MONTH: 1)
         
         sara.dateCreated = now - 2
         sara.save(failOnError: true)
